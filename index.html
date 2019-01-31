@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tolya v 0.1</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic" rel="stylesheet">
+    <script src="tolya.js"></script>
+</head>
+<body>
+<style>
+    * {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: lighter;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    html {
+        background: #eee;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    textarea {
+        margin: 5vh 0;
+        width: 60%;
+        height: 70vh;
+        background: #f3f4f6;
+    }
+
+    input[type="text"] {
+        border: solid 2px #7f6161;
+        width: 190vh;
+        margin: 3vh 0 3vh 0;
+        font-size: 22px;
+        padding: 1vh 3vh;
+    }
+
+    h1, h2, h4, h5 {
+        text-align: left;
+        width: 190vh;
+    }
+
+    .log {
+        width: 190vh;
+        height: 79vh;
+
+        overflow-y: scroll;
+        margin: 3vh 0 0 0;
+
+        padding: 1vh 3vh;
+        font-size: 14px;
+
+        border-radius: 4px;
+        background: url("img/bg.png") repeat;
+
+        border: solid 2px #7f6161;
+    }
+
+    .message {
+        max-width: 100vh;
+        clear: both;
+        display: inline-block;
+        border: solid 1px #f3f4f6;
+        color: #fff;
+        background: #6f6f6f;
+        padding: 1vh 1vh;
+        border-radius: 0vh 2.5vh;
+        margin: 1vh;
+    }
+
+    .message.tolya {
+        float: left;
+        text-align: left;
+    }
+
+    .message.player {
+        float: right;
+        text-align: right;
+    }
+
+</style>
+<div id="main">
+    <div class="row">
+        <h1>Привет, я Толя</h1>
+    </div>
+    <div class="row">
+        <h2>унивресальный, ехидный, бесшумный, озадаченный, креативный или коротко УЕБОК</h2>
+    </div>
+    <div class="row">
+        <h4>
+            Если хочешь поговорить со мной, просто напиши мне что-то!
+        </h4>
+    </div>
+    <div class="row">
+        <h5>
+            Все сходства с реальными людьми - беспочвенны,
+            я абсолютно вымешленный персонаж, существующий только в вируальном пространстве!
+        </h5>
+    </div>
+    <div class="row">
+        <div class="log" id="log-container">
+
+        </div>
+    </div>
+    <div class="row">
+        <input id="message" type="text" placeholder="Спроси меня что нибудь"/>
+    </div>
+</div>
+</body>
+</html>
